@@ -24,19 +24,19 @@ cd playwright-search-tests
 npm install
 ```
 
-### 3. Run all tests
+### 3. Run all tests(executes all tests in 3 different browser - chrome,firefox,safari)
 
 ```bash
 npx playwright test
 ```
 
-### 4. Run tests in headed mode
+### 4. Run tests in headed mode(optional)
 
 ```bash
 npx playwright test --headed
 ```
 
-### 5. Run tests in diffrent browsers
+### 5. Run tests in diffrent browsers(optional)
 
 ```bash
 npx playwright test --project=chromium
@@ -44,7 +44,7 @@ npx playwright test --project=firefox
 npx playwright test --project=webkit
 ```
 
-### 6. View test reports
+### 6. View test reports(optional)
 
 ```bash
 npx playwright show-report
@@ -55,6 +55,7 @@ npx playwright test --reporter html
 ```
 
 ## Test Coverage
+Below are the Test Coverage results for the test cases commited to this repository:
 
 | Test Case ID| Description                                                  | Expected Result                      | Status(chrome)|Status(firefox)|Status(safari)
 |-------------|--------------------------------------------------------------|--------------------------------------|---------------|---------------|--------------|
