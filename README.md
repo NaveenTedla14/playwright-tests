@@ -1,6 +1,7 @@
 # 🔍 Microsoft Search Bar - Playwright Tests
 
 This project consists of automated end-to-end test scripts using Playwright to validate the **search functionality** of [microsoft.com](https://www.microsoft.com), including edge cases, user behaviors, and input types.
+Tests are located at playwright_search_tests.spec.ts file found under tests directory
 
 ## 📦 Tech Stack
 
