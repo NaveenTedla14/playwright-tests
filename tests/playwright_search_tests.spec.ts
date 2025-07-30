@@ -187,5 +187,59 @@ test.describe('Microsoft Learn Search Functionality', () => {
     ).toContainText(/Azure/i);
   })
 
+    // To verify search functionality works with  case insensitivity
+    test('TC14: Search with case insensitivity input and display results', async ({ page }) => {
+      // Enter a  search term 'AZURE DEVELOPER DOCUMENTATION' and verify results are shown
+      await page.fill('input[id="facet-search-input"]', 'AZURE DEVELOPER DOCUMENTATION');
+      // Click on the Search button
+      await page.click('button[id="facet-search-submit"]');
+      await expect(page).toHaveURL(/search/);
+      // First search result to be visible
+      await expect(page.locator('a[data-bi-name="searchItem.0"]')).toBeVisible();
+      // First search result to contain text 'Azure developer documentation'
+      await expect(
+        page.locator('a[data-bi-name="searchItem.0"]')
+      ).toContainText("Azure developer documentation");
+
+      // Enter a  search term 'azure developer documentation' and verify results are shown
+      await page.fill('input[id="facet-search-input"]', 'azure developer documentation');
+      // Click on the Search button
+      await page.click('button[id="facet-search-submit"]');
+      await expect(page).toHaveURL(/search/);
+      // First search result to be visible
+      await expect(page.locator('a[data-bi-name="searchItem.0"]')).toBeVisible();
+      // First search result to contain text 'Azure developer documentation'
+      await expect(
+        page.locator('a[data-bi-name="searchItem.0"]')
+      ).toContainText("Azure developer documentation");
+
+      // Enter a search term 'AzUre DeVeLoPer DoCumEntAtioN' and verify results are shown
+      await page.fill('input[id="facet-search-input"]', 'AzUre DeVeLoPer DoCumEntAtioN');
+      // Click on the Search button
+      await page.click('button[id="facet-search-submit"]');
+      await expect(page).toHaveURL(/search/);
+      // First search result to be visible
+      await expect(page.locator('a[data-bi-name="searchItem.0"]')).toBeVisible();
+      // First search result to contain text 'Azure developer documentation'
+      await expect(
+        page.locator('a[data-bi-name="searchItem.0"]')
+      ).toContainText("Azure developer documentation");
+    });
+
+     // To verify search functionality works with integers
+     test('TC15: Search with integers and display results', async ({ page }) => {
+      // Enter a  search term '12345' and verify results are shown
+      await page.fill('input[id="facet-search-input"]', '12345');
+      // Click on the Search button
+      await page.click('button[id="facet-search-submit"]');
+      await expect(page).toHaveURL(/search/);
+      // First search result to be visible
+      await expect(page.locator('a[data-bi-name="searchItem.0"]')).toBeVisible();
+      // First search result to contain text '12345'
+      await expect(
+        page.locator('[id="description-0"]')
+      ).toContainText("12345");   
+    })
+
 
 });
