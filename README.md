@@ -56,20 +56,20 @@ npx playwright test --reporter html
 
 ## Test Coverage
 
-| Test Case ID| Description                                                  | Expected Result                      | Status(chrome)|
-|-------------|--------------------------------------------------------------|--------------------------------------|---------------|
-| TC01        | Search bar is visible and interactive                        | Search bar is displayed              | ✅ Pass       |
-| TC02        | Search with valid input ,click search button                 | Results are dispalyed                | ✅ Pass       |
-| TC03        | Search with valid input, press Enter                         | Resutls are displayed                | ✅ Pass       |
-| TC04        | Search and navigating to first result                        | Navigated and verified Title         | ✅ Pass       |
-| TC05        | Click and Select from Dropdown Menu                          | Navigated to menu and verified Title | ✅ Pass       |
-| TC06        | Search with random input                                     | page displays with no results text   | ✅ Pass       |
-| TC07        | Search with empty input                                      | no results are displayed             | ✅ Pass       |
-| TC08        | Search with special characters                               | page shows results                   | ✅ Pass       |
-| TC09        | Search with whitespace                                       | page shows no results                | ✅ Pass       |
-| TC10        | Search input field does not accept more than 100 characters  | Only 100 chars allowed               | ✅ Pass       |
-| TC11        | Search with multilingual input (French)                      | page shows results                   | ✅ Pass       |
-| TC12        | Paste input into search field via keyboard paste simulation  | page shows results                   | ✅ Pass       |
-| TC13        | Search with valid input and shows autocomplete suggestions   | auto suggestions are displayed       | ✅ Pass       |
+| Test Case ID| Description                                                  | Expected Result                      | Status(chrome)|Status(firefox)|Status(safari)
+|-------------|--------------------------------------------------------------|--------------------------------------|---------------|---------------|--------------|
+| TC01        | Search bar is visible and interactive                        | Search bar is displayed              | ✅ Pass       | ✅ Pass        | ✅ Pass      |
+| TC02        | Search with valid input ,click search button                 | Results are dispalyed                | ✅ Pass       | ✅ Pass        | ✅ Pass      |
+| TC03        | Search with valid input, press Enter                         | Resutls are displayed                | ✅ Pass       | ✅ Pass        | ✅ Pass      |
+| TC04        | Search and navigating to first result                        | Navigated and verified Title         | ✅ Pass       | ✅ Pass        | ✅ Pass      |
+| TC05        | Click and Select from Dropdown Menu                          | Navigated to menu and verified Title | ✅ Pass       | ✅ Pass        | ✅ Pass      |
+| TC06        | Search with random input                                     | page displays with no results text   | ✅ Pass       | ✅ Pass        | ✅ Pass      | 
+| TC07        | Search with empty input                                      | no results are displayed             | ✅ Pass       | ✅ Pass        | ✅ Pass      |
+| TC08        | Search with special characters                               | page shows results                   | ✅ Pass       | ✅ Pass        | ✅ Pass      |
+| TC09        | Search with whitespace                                       | page shows no results                | ✅ Pass       | ✅ Pass        | ✅ Pass      |
+| TC10        | Search input field does not accept more than 100 characters  | Only 100 chars allowed               | ✅ Pass       | ✅ Pass        | ✅ Pass      |
+| TC11        | Search with multilingual input (French)                      | page shows results                   | ✅ Pass       | ✅ Pass        | ✅ Pass      |
+| TC12        | Paste input into search field via keyboard paste simulation  | page shows results                   | ✅ Pass       | ✅ Pass        | ✅ Pass      |
+| TC13        | Search with valid input and shows autocomplete suggestions   | auto suggestions are displayed       | ✅ Pass       | ✅ Pass        | ✅ Pass      |
 
 
