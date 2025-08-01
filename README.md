@@ -15,7 +15,7 @@ Tests are located at playwright_search_tests.spec.ts file found under tests dire
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/playwright-search-tests.git
+git clone https://github.com/NaveenTedla14/playwright-tests.git
 cd playwright-search-tests
 ```
 
